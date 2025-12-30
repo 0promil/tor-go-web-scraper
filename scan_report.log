@@ -6,3 +6,28 @@
 2025/12/30 20:08:18 [INFO] http://rnsm777cdsjrsdlbs4v5qoeppu3px6sb2igmh53jzrx7ipcrbjz5b2ad.onion/ -> 200 (10.123396s)
 2025/12/30 20:08:18 [INFO] http://g7ejphhubv5idbbu3hb3wawrs5adw7tkx7yjabnf65xtzztgg4hcsqqd.onion/ -> 200 (22.8819996s)
 2025/12/30 20:08:30 [INFO] http://allvyncoa6nd74g4smxmnvx662ly6tj2ojttt77e2mnycrzv2hnanvid.onion/ -> 200 (34.1348942s)
+2025/12/31 00:28:17 [INFO] Tor aktif: 127.0.0.1:9150
+2025/12/31 00:28:18 [TOR] check.torproject.org: {"IsTor":true,"IP":"192.42.116.195"}
+2025/12/31 00:28:27 [INFO] http://ransomocmou6mnbquqz44ewosbkjk3o5qjsl3orawojexfook2j7esad.onion/ -> 200 (9.3499885s)
+2025/12/31 00:28:27 [INFO] http://6i42qq2xdu244a3xp2c3gjvcwtp3hurbajesfnsuga2v3frf6x7ivcyd.onion/ -> 200 (9.4588775s)
+2025/12/31 00:28:27 [INFO] http://santat7kpllt6iyvqbr7q4amdv6dzrh6paatvyrzl7ry3zm72zigf4ad.onion/ -> 200 (9.5109214s)
+2025/12/31 00:28:28 [INFO] http://blkh4ylofapg42tj6ht565klld5i42dhjtysvsnnswte4xt4uvnfj5qd.onion/ -> 200 (10.166123s)
+2025/12/31 00:28:28 [INFO] http://blkh4ylofapg42tj6ht565klld5i42dhjtysvsnnswte4xt4uvnfj5qd.onion/ -> 200 (10.3099407s)
+2025/12/31 00:28:35 [INFO] http://ja3u5tq4z6rbsmnme6drofwms2zxeagy6urhhbmufejlibvugn2n2pid.onion/ -> 200 (7.8117997s)
+2025/12/31 00:28:38 [INFO] http://22wha6wtnwsb2tvklnwcfukjzqqwqk4dkrgrwfhwffqukeonnk3jp4ad.onion/ -> 200 (10.435066s)
+2025/12/31 00:28:41 [INFO] http://xjfbpuj56rdazx4iolylxplbvyft2onuerjeimlcqwaihp3s6r4xebqd.onion/ -> 200 (12.7958477s)
+2025/12/31 00:28:47 [INFO] http://santat7kpllt6iyvqbr7q4amdv6dzrh6paatvyrzl7ry3zm72zigf4ad.onion/ -> 200 (8.3346896s)
+2025/12/31 00:28:48 [INFO] http://ewhgmbudmub2m4s6kazu6b3sq27zazmbyol5g7jlbnflfehpxhydnpqd.onion/ -> 200 (20.8692699s)
+2025/12/31 00:28:51 [INFO] http://qu4uozvpw62pjikawmrwds7kanyz3iytnh5pnhscd3pr3krihyejpgyd.onion/ -> 200 (10.3975113s)
+2025/12/31 00:28:51 [INFO] https://reycdxyc24gf7jrnwutzdn3smmweizedy7uojsa7ols6sflwu25ijoyd.onion/ -> 200 (16.4699174s)
+2025/12/31 00:28:52 [ERR ] http://c4s7hpsq3tu7wgml3vzbycvwcxjnlsh6m5boyw7ixlkk24jeoywqznyd.onion/ -> TIMEOUT
+2025/12/31 00:29:00 [INFO] http://galaxy4ogmifzf2wwdkbedqeps7pzxa53bkluyszq6sqng4u5g5nixid.onion/blog -> 200 (12.3552003s)
+2025/12/31 00:29:01 [INFO] http://clzuhx25lnkadj5ulir7iqhanakafwhn24zzi2fvfyml7dtoi6fkxmad.onion/ -> 200 (10.0206063s)
+2025/12/31 00:29:07 [INFO] http://57g737gvcitrtbpi6uutlqgix4vga66xzexxiacnof36we4vgdosljad.onion/ -> 200 (15.6951727s)
+2025/12/31 00:29:14 [INFO] http://rcbwx654n44axrba7q34aqaq2xhsp67aq244xd6ppgwndqfedjjvijad.onion/ -> 403 (12.7248359s)
+2025/12/31 00:29:17 [ERR ] http://lf5j2ovm7zm3fmno7o3dikcx2qw5ipxpztoj6ljvfqkuuhwsxb6bnnad.onion/ -> TIMEOUT
+2025/12/31 00:29:22 [ERR ] https://exploitivzcm5dawzhe6c32bbylyggbjvh5dyvsvb5lkuz5ptmunkmqd.onion -> TIMEOUT
+2025/12/31 00:29:25 [INFO] http://prohqcpxrgccapgxoohihrdhwtdhygee73qamqndfy2vg536cmue6oyd.onion/ -> 200 (18.5606287s)
+2025/12/31 00:29:27 [INFO] http://blackbaymp7ahsphu66pofvd6imlb6h5uqn7pxv3de6rpwqgutalnjid.onion/ -> 200 (27.2286522s)
+2025/12/31 00:29:36 [ERR ] http://venom5wlknvokvvxiczl5x3otal4vbpip5h45jqogglhn3baycpznnqd.onion/ -> SCREENSHOT FAILED
+2025/12/31 00:29:36 [INFO] http://venom5wlknvokvvxiczl5x3otal4vbpip5h45jqogglhn3baycpznnqd.onion/ -> 200 (49.0241918s)
