@@ -1,0 +1,168 @@
+<!--
+OFFLINE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="#">
+    <title>Submit a Ticket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="#">
+    <link rel="preconnect" href="#" crossorigin>
+    <link href="#" rel="stylesheet">
+
+	<script src=""></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="preloader">
+    <div class="preloader_logo">
+        <img src="" alt="Logo">
+        <div class="preloader_title"><c>MEDUSA</c> LOCKER</div>
+        <div class="preloader_subtitle">GROUP</div>
+    </div>
+    <div class="preloader_line">
+        <div class="preloader_fill" style="width: 0%;"></div>
+    </div>
+    <div class="preloader_process">0%</div>
+</div>
+
+<header>
+    <div class="container header_cont">
+
+        <a href="#"><div class="header_logo"><img src=""></div></a>
+
+        <div class="header_col">
+             <a href="#">How the file decrypter works?</a>
+            <a href="#">About us</a>
+<!--            <a href="#"><img src="">Open TOR blog</a>-->
+        </div>
+
+    </div>
+</header>
+
+<form name="submit_ticket" action="/submit_ticket" method="post" enctype='multipart/form-data'>
+    <main>
+        <div class="intro_img"><img class="intro_bg" src=""><a href="#" target="_blank"><img src="">Open TOR blog</a></div>
+        <div class="intro_title">Submit <c>a Ticket</c></div>
+
+        <div class="main_container">
+
+            <div class="input_username">
+                <div>E-mail</div>
+                <div><input type="text" placeholder="Enter your email" name="email" style="width: 100%;"></div>
+            </div>
+
+            <div class="input_id">
+                <div>ID</div>
+                <div><textarea type="text" placeholder="Enter your ID" name="user_id" style="width: 100%;"></textarea></div>
+            </div>
+
+            <div class="upload_title"><c>Upload file for test decoding </c> - You can attach 1 file for a free decryption as proof that our decryptors work.</div>
+
+            <div class="upload_subtitle"><div>The file can be up to 15 mb.</div></div>
+
+            <div class="upload_input">
+                <input type="file" id="fileInput" name="file">
+                <button type="submit" name="submit_button">Submit<img src=""></button>
+            </div>
+
+        </div>
+
+    </main>
+</form>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const preloader = document.querySelector('.preloader');
+    const preloaderFill = document.querySelector('.preloader_fill');
+    const preloaderProcess = document.querySelector('.preloader_process');
+    let progress = 0;
+
+    // Disable scroll
+    document.body.classList.add('preloader-active');
+
+    const interval = setInterval(() => {
+        progress++;
+        preloaderFill.style.width = `${progress}%`;
+        preloaderProcess.textContent = `${progress}%`;
+
+        if (progress >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+                // Enable scroll
+                document.body.classList.remove('preloader-active');
+            }, 1000); // Wait 1 second after reaching 100%
+        }
+    }, 30); // 3 seconds = 100 steps * 30ms
+});
+
+
+  document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file && file.size > 15 * 1024 * 1024) { // 15 MB in bytes
+      alert('The file size exceeds 15 MB. Please choose a smaller file.');
+      event.target.value = '';
+    }
+  });
+
+$(document).ready(function () {
+    // Fetch CSRF token on page load
+    let csrfToken = '';
+    $.get('/csrf-token', function(data) {
+        csrfToken = data.csrfToken;
+    });
+
+    $('form[name="submit_ticket"]').submit(function (e) {
+        $('button[name="submit_button"]').hide();
+
+        e.preventDefault();
+
+        var form = $(this);
+        var actionUrl = form.attr('action');
+        var formData = new FormData(this);
+        
+        // Add CSRF token to form data
+        formData.append('_csrf', csrfToken);
+
+        $.ajax({
+            type: 'POST',
+            url: actionUrl,
+            data: formData,
+            processData: false,
+            contentType: false,
+            headers: {
+                'CSRF-Token': csrfToken  // Also send as header for redundancy
+            },
+            success: function (data) {
+                $('button[name="submit_button"]').show();
+
+                alert(data['message']);
+
+                if (data['status'])
+                    window.location.replace('/ticket/' + data['ticket']);
+            },
+            error: function (xhr) {
+                $('button[name="submit_button"]').show();
+                
+                if (xhr.status === 403) {
+                    alert('Security error: Invalid CSRF token. Please refresh the page and try again.');
+                    location.reload();
+                } else if (xhr.status === 400) {
+                    const response = xhr.responseJSON;
+                    alert('Error: ' + (response && response.message ? response.message : 'Invalid request'));
+                } else {
+                    alert('Request not processed');
+                }
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

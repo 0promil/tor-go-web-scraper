@@ -1,0 +1,4 @@
+https://fonts.googleapis.com
+https://fonts.gstatic.com
+https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;700&family=Titillium+Web:wght@400;700&display=swap
+https://kleenscan.com/index
